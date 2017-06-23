@@ -3,9 +3,11 @@ var express = require('express');
 var app = express();
 // 2. sets up app
 
+var message = "hi"
+
 app.get('/', function (req, res) {
   console.log("working")
-  res.render('index.ejs')
+  res.render('index.ejs', {message})
 // 10. says when someone gets on to server send them this ejs file
 })
 // 6. the function is using the arguments request and response to tell the page what to do.
@@ -19,6 +21,18 @@ app.set('views','./veiws')
 // 12. got to terminal and hit control c
 // 13. type in npm install --save ejs
 // 14. type in nodemon to restart the server
+
+app.use(express.static('public'))
+// 15. listen goes last
+// 16. public (folder) has all the static files (javascript and css) and express.static tells it where to find static files.
+// 17.just type file name not public/file name because of line 23.
+
+// res.render('index.ejs', {message})
+// 18. sends the variable message to the index.ejs file.
+// 19. would replace line 10 of res.render('index.ejs')
+// 20. can only render 1 thing per get.
+// 21. can have multiple get files (routs)
+
 
 app.listen(3000, function () {
   console.log("server is on")
