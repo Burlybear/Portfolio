@@ -1,3 +1,6 @@
+
+// 22. can just run npm install after cloning the github file to install dependancies!!
+
 var express = require('express');
 // 1. sets up express. got to terminal and do npm init then when a file shows up do npm install express --save
 var app = express();
