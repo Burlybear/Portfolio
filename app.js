@@ -5,7 +5,8 @@ var app = express();
 
 app.get('/', function (req, res) {
   console.log("working")
-  res.send('hi there')
+  res.render('index.ejs')
+// 10. says when someone gets on to server send them this ejs file
 })
 // 6. the function is using the arguments request and response to tell the page what to do.
 // 7. refresh the page in chrome
@@ -13,7 +14,11 @@ app.get('/', function (req, res) {
 
 app.set('view engine','ejs')
 app.set('views','./veiws')
-// this sets the link to the 
+// 9. this sets the link to the ejs file up
+// 11. set has to go before listen
+// 12. got to terminal and hit control c
+// 13. type in npm install --save ejs
+// 14. type in nodemon to restart the server
 
 app.listen(3000, function () {
   console.log("server is on")
