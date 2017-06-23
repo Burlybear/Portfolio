@@ -6,16 +6,32 @@ var express = require('express');
 var app = express();
 // 2. sets up app
 
+var bodyParser = require('body-parser')
+// 24. type in npm install --save body-parser
+
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+// 25. cleans up massive object from ajax so it is useable.
+
 var message = "hi"
 
 app.get('/', function (req, res) {
   console.log("working")
-  res.render('index.ejs', {message})
+  var response = ""
+  res.render('index.ejs', { response})
 // 10. says when someone gets on to server send them this ejs file
 })
 // 6. the function is using the arguments request and response to tell the page what to do.
 // 7. refresh the page in chrome
 // 8. make a html that is 'name'.ejs to get the html working with the server
+
+app.post('/', function (req, res) {
+  console.log(req.body)
+  response = req.body.userResponse
+  res.render('index.ejs', {response})
+// 23. setting up rout for post to the server
+})
 
 app.set('view engine','ejs')
 app.set('views','./veiws')
@@ -28,7 +44,7 @@ app.set('views','./veiws')
 app.use(express.static('public'))
 // 15. listen goes last
 // 16. public (folder) has all the static files (javascript and css) and express.static tells it where to find static files.
-// 17.just type file name not public/file name because of line 23.
+// 17.just type file name not public/file name because of line 34.
 
 // res.render('index.ejs', {message})
 // 18. sends the variable message to the index.ejs file.

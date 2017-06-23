@@ -1,0 +1,11 @@
+button{
+  background-color: green;
+  color:blue;
+}
+button:hover{
+  background-color: blue;
+  color: yellow;
+}
+body{
+  background-color: red;
+}
