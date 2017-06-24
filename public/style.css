@@ -9,3 +9,12 @@ button:hover{
 body{
   background-color: red;
 }
+#nav{
+  width: 90%;
+  margin: 0 auto;
+  padding-top:10px;
+  border-bottom: 1px solid gray;
+}
+li{
+  display: inline-block;
+}
