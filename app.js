@@ -26,12 +26,7 @@ app.get('/', function (req, res) {
 // 7. refresh the page in chrome
 // 8. make a html that is 'name'.ejs to get the html working with the server
 
-app.get('/', function (req, res) {
-  console.log("working")
-   response = ""
-  res.render('pagel.ejs', { response})
-// 10. says when someone gets on to server send them this ejs file
-})
+
 
 app.post('/', function (req, res) {
   console.log(req.body)
@@ -66,7 +61,3 @@ app.listen(3000, function () {
 // 3. app is listening on port 3000
 // 4. type nodemon name of file into terminal to get the server up and running.
 // 5. got to localhost:3000 to get to the server page
-
-app.listen(3000/pagel, function () {
-  console.log("server is on")
-})
