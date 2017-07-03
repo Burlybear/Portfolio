@@ -6,5 +6,7 @@ $(document).ready(function() {
       url: "/",
       data:{ "userResponse": l }
     })
+    $("#q").text("User Response:");
+    $("#p").text(l);
   })
 })

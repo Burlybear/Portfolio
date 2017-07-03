@@ -18,3 +18,11 @@ body{
 li{
   display: inline-block;
 }
+.b{
+  background-color: lightBlue;
+  color: #63064D;
+}
+#q{
+  font-size: 30px;
+  font-weight: 500;
+}
