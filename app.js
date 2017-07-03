@@ -61,3 +61,6 @@ app.listen(3000, function () {
 // 3. app is listening on port 3000
 // 4. type nodemon name of file into terminal to get the server up and running.
 // 5. got to localhost:3000 to get to the server page
+
+
+// COMMIT
