@@ -26,3 +26,14 @@ li{
   font-size: 30px;
   font-weight: 500;
 }
+.page-link{
+  float: right;
+  margin-right: 20px;
+}
+.page-link a{
+  text-decoration: none;
+  color:gray;
+}
+.page-link a:hover {
+  color: black;
+}

@@ -26,7 +26,10 @@ app.get('/', function (req, res) {
 // 7. refresh the page in chrome
 // 8. make a html that is 'name'.ejs to get the html working with the server
 
-
+// app.get('/', function (req, res) {
+//   console.log("working")
+//   var response = ""
+//   res.render('pagel.ejs', { response})
 
 app.post('/', function (req, res) {
   console.log(req.body)
